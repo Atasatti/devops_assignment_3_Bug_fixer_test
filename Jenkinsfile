@@ -9,8 +9,8 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'afnankhan03/devops-task-manager:latest'
         CONTAINER_NAME = 'task-manager-test-container'
-        APP_PORT = '3000'
-        APP_URL = 'http://16.171.13.142:3000'
+        APP_PORT = '5050'
+        APP_URL = 'http://16.171.13.142:5050'
     }
     
     options {
@@ -65,7 +65,7 @@ pipeline {
                     sh """
                         docker run -d \
                         --name ${CONTAINER_NAME} \
-                        -p ${APP_PORT}:3000 \
+                        -p ${APP_PORT}:5050 \
                         ${DOCKER_IMAGE}
                     """
                     
@@ -172,9 +172,9 @@ pipeline {
                 emailBody += "</table><h3>📊 Test Summary</h3>"
                 
                 // Parse test results if available
-                if (fileExists('target/surefire-reports/TEST-TaskManagerTest.xml')) {
+                if (fileExists('target/surefire-reports/TEST-BugFixerTest.xml')) {
                     try {
-                        def testXml = readFile('target/surefire-reports/TEST-TaskManagerTest.xml')
+                        def testXml = readFile('target/surefire-reports/TEST-BugFixerTest.xml')
                         
                         // Extract test suite attributes using regex
                         def testsMatch = (testXml =~ /tests="(\d+)"/)

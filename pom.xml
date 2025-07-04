@@ -10,8 +10,8 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Task Manager Selenium Tests</name>
-    <description>Automated UI tests for Task Manager application using Selenium WebDriver</description>
+    <name>Bug Fixer Selenium Tests</name>
+    <description>Automated UI tests for Bug Fixer application using Selenium WebDriver</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

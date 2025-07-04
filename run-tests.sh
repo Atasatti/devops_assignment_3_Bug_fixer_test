@@ -8,10 +8,10 @@ echo "Starting automated UI tests..."
 
 # Check if Task Manager is running
 echo "Checking if Task Manager is accessible..."
-if curl -s http://localhost:3000/health > /dev/null; then
+if curl -s http://localhost:5050/health > /dev/null; then
     echo "✓ Task Manager is running and accessible"
 else
-    echo "⚠ Warning: Task Manager may not be running at http://localhost:3000"
+    echo "⚠ Warning: Task Manager may not be running at http://localhost:5050"
     echo "Please ensure the Task Manager application is running before continuing."
     read -p "Continue anyway? (y/N): " -n 1 -r
     echo

@@ -1,6 +1,6 @@
-# Task Manager Selenium Test Suite
+# Bug Tracker Selenium Test Suite
 
-This project contains automated UI tests for the Task Manager application using Java, Selenium WebDriver, and JUnit 5.
+This project contains automated UI tests for the Bug Tracker application using Java, Selenium WebDriver, and JUnit 5.
 
 ## Project Structure
 
@@ -8,27 +8,27 @@ This project contains automated UI tests for the Task Manager application using 
 selenium-tests/
 ├── pom.xml                           # Maven configuration
 ├── src/test/java/
-│   └── TaskManagerTest.java          # Main test class with 10 test cases
+│   └── BugTrackerTest.java          # Main test class with 10 test cases
 └── README.md                         # This file
 ```
 
 ## Test Cases Covered
 
 1. **TC01: Homepage Title Verification** - Verifies application loads with correct title
-2. **TC02: Create New Task** - Tests task creation functionality
-3. **TC03: Update Existing Task** - Tests task editing functionality  
-4. **TC04: Delete Task** - Tests task deletion functionality
+2. **TC02: Create New Bug** - Tests bug creation functionality
+3. **TC03: Update Existing Bug** - Tests bug editing functionality  
+4. **TC04: Delete Bug** - Tests bug deletion functionality
 5. **TC05: Form Validation** - Tests form validation with empty fields
-6. **TC06: Create Multiple Tasks** - Tests handling of multiple tasks
-7. **TC07: Toggle Task Status** - Tests status change functionality
+6. **TC06: Create Multiple Bugs** - Tests handling of multiple bugs
+7. **TC07: Toggle Bug Status** - Tests status change functionality
 8. **TC08: Priority Color Indicators** - Tests visual priority indicators
-9. **TC09: Task Persistence After Refresh** - Tests data persistence
+9. **TC09: Bug Persistence After Refresh** - Tests data persistence
 10. **TC10: Health Endpoint Check** - Tests application health monitoring
 
 ## Prerequisites
 
 - Docker (for running with markhobson/maven-chrome)
-- Task Manager application running at `http://localhost:3000`
+- Bug Tracker application running at `http://localhost:5050`
 
 ## Running Tests
 
@@ -55,7 +55,7 @@ mvn test
 
 ## Configuration
 
-- **Target URL**: `http://host.docker.internal:3000` (works from inside Docker)
+- **Target URL**: `http://host.docker.internal:5050` (works from inside Docker)
 - **Browser**: Chrome (headless mode)
 - **Timeout**: 10 seconds for element waits
 - **Test Order**: Tests run in a specific order using `@Order` annotations
@@ -64,7 +64,7 @@ mvn test
 
 - **Headless Chrome**: Tests run without GUI for CI/CD compatibility
 - **Robust Waits**: Uses WebDriverWait for reliable element interactions
-- **Cleanup**: Automatically clears tasks between tests
+- **Cleanup**: Automatically clears bugs between tests
 - **Detailed Logging**: Console output for debugging
 - **Cross-platform**: Works on Linux, macOS, and Windows
 
@@ -100,10 +100,10 @@ pipeline {
 
 ## Troubleshooting
 
-1. **Connection Issues**: Ensure Task Manager is running at `http://localhost:3000`
+1. **Connection Issues**: Ensure Bug Tracker is running at `http://localhost:5050`
 2. **Docker Issues**: Verify Docker is running and has network access
 3. **Test Failures**: Check console output for detailed error messages
-4. **Timing Issues**: Increase timeout in `TaskManagerTest.java` if needed
+4. **Timing Issues**: Increase timeout in `BugTrackerTest.java` if needed
 
 ## Dependencies
 
