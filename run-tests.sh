@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Task Manager Selenium Test Runner Script
-# This script runs the automated UI tests using Docker
+# This script runs the automated UI tests using Docker--checking trigger
 
 echo "=== Task Manager Selenium Test Suite ==="
 echo "Starting automated UI tests..."
