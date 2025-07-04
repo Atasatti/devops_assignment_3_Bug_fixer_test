@@ -26,7 +26,7 @@ public class BugFixerTest {
     private static final String BASE_URL =
     System.getenv("APP_URL") != null ? System.getenv("APP_URL") :
     System.getProperty("APP_URL") != null ? System.getProperty("APP_URL") :
-    "http://host.docker.internal:5000";
+    "http://host.docker.internal:5050";
     private static final Duration TIMEOUT = Duration.ofSeconds(10);
 
     /**
