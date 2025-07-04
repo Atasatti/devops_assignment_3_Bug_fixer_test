@@ -247,7 +247,7 @@ pipeline {
             }
             
             emailext (
-                to: "afnanajmal03@gmail.com",
+                to: "Ataulhaq490@gmail.com",
                 subject: "🚀 Task Manager CI/CD - Build #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
                 body: env.EMAIL_BODY ?: "Build completed with status: ${currentBuild.currentResult}",
                 mimeType: 'text/html'
