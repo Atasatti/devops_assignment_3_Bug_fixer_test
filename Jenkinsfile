@@ -7,10 +7,10 @@ pipeline {
     }
     
     environment {
-        DOCKER_IMAGE = 'afnankhan03/devops-task-manager:latest'
-        CONTAINER_NAME = 'task-manager-test-container'
+        DOCKER_IMAGE = 'ataulhaq490/bug-fixer:latest'
+        CONTAINER_NAME = 'bug-fixer-test-container'
         APP_PORT = '5050'
-        APP_URL = 'http://16.171.13.142:5050'
+        APP_URL = 'http://51.20.121.239:5050'
     }
     
     options {
